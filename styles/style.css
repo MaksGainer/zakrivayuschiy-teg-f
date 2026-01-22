@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   padding-block: 100px;
-  color: var(--color-text-default);
-  font-family: var(--font-family-page);
+  color: var(--color-text-default, #000);
+  font-family: var(--font-family-page, sans-serif);
   background-image: var(--background-fill);
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--font-weight-page);
+  font-variation-settings: 'wght' var(--font-weight-page, 410);
 }
 
 .block-size {
@@ -22,15 +22,15 @@
   margin-block-end: 98px;
   border: var(--border-default);
   padding-block: clamp(7.5rem, 15vw, 8rem);
-  font-family: var(--font-family-ui);
+  font-family: var(--font-family-ui, fantasy);
   line-height: 1;
   text-align: center;
-  background-color: var(--color-surface-default);
+  background-color: var(--color-surface-default, #fff);
 }
 
 .logo {
-  font-family: var(--font-family-ui);
-  font-weight: var(--font-weight-ui);
+  font-family: var(--font-family-ui, fantasy);
+  font-weight: var(--font-weight-ui, 400);
   line-height: 1;
   text-transform: uppercase;
 }
@@ -47,7 +47,7 @@
 }
 
 .header__title {
-  color: var(--color-text-default);
+  color: var(--color-text-default, #000);
   font-size: var(--font-size-ui-title);
   text-transform: uppercase;
 }
@@ -60,15 +60,15 @@
 
 .card {
   border: var(--border-default);
-  background-color: var(--color-surface-default);
+  background-color: var(--color-surface-default, #fff);
 }
 
 .card__title {
   border-block-end: var(--border-default);
   padding: 4px 10px;
   font-family: var(--font-family-page, sans-serif);
-  font-size: var(--font-size-page);
-  font-variation-settings: 'wght' var(--font-weight-page-title);
+  font-size: var(--font-size-page, 1.125rem);
+  font-variation-settings: 'wght' var(--font-weight-page-title, 715);
 }
 
 .card__image-wrapper {
@@ -89,8 +89,8 @@
   position: absolute;
   z-index: 2;
   opacity: 0.5;
-  color: var(--color-text-default);
-  font-size: var(--font-size-ui);
+  color: var(--color-text-default, #000);
+  font-size: var(--font-size-ui, 0.875rem);
   pointer-events: none;
   inset-block-start: 25px;
   inset-inline-end: 25px;
@@ -100,8 +100,8 @@
 @supports (-webkit-text-stroke: 1px #fff) {
 
   .card__label {
-    -webkit-text-stroke: 1px var(--color-label-stroke);
-    text-stroke: 1px var(--color-label-stroke);
+    -webkit-text-stroke: 1px var(--color-stroke, #fff);
+    text-stroke: 1px var(--color-stroke, #fff);
   }
 }
 
@@ -109,10 +109,10 @@
 
   .card__label {
     text-shadow:
-      -1px 0 var(--color-label-stroke),
-      1px 0 var(--color-label-stroke),
-      0 -1px var(--color-label-stroke),
-      0 1px var(--color-label-stroke);
+      -1px 0 var(--color-stroke, #fff),
+      1px 0 var(--color-stroke, #fff),
+      0 -1px var(--color-stroke, #fff),
+      0 1px var(--color-stroke, #fff);
   }
 }
 
@@ -131,7 +131,7 @@
 }
 
 .card__description-text {
-  font-size: var(--font-size-page);
+  font-size: var(--font-size-page, 1.125rem);
   line-height: 21px;
 }
 
@@ -148,8 +148,8 @@
   align-items: center;
   border: var(--border-default);
   overflow: hidden;
-  color: var(--color-button-text);
-  background-color: var(--color-surface-default);
+  color: var(--color-button-text, #fff);
+  background-color: var(--color-surface-default, #fff);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -159,7 +159,7 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0 var(--color-accent-default);
+  box-shadow: 2px 2px 0 var(--color-accent-default, #000);
 }
 
 .button::before {
@@ -167,7 +167,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background-color: var(--color-accent-default);
+  background-color: var(--color-accent-default, #000);
   transition: transform 0.5s ease-in-out;
   transform: translateX(-100%);
 }
@@ -179,9 +179,9 @@
 .button__text {
   position: relative;
   z-index: 2;
-  font-family: var(--font-family-ui);
-  font-weight: var(--font-weight-ui);
-  font-size: var(--font-size-ui);
+  font-family: var(--font-family-ui, fantasy);
+  font-weight: var(--font-weight-ui, 400);
+  font-size: var(--font-size-ui, 0.875rem);
   line-height: 0.9;
   mix-blend-mode: difference;
 }
@@ -206,12 +206,12 @@
 }
 
 .card__icon-button:focus-visible {
-  outline-color: var(--color-border-default);
+  outline-color: var(--color-border-default, #000);
 }
 
 .card__like-button {
   padding: 10px 0;
-  inline-size: 130px;
+  min-inline-size: 130px;
 }
 
 .heart {
@@ -237,37 +237,37 @@
 }
 
 .like-icon:hover .core {
-  fill: var(--color-icon-contour);
+  fill: var(--color-icon-contour, #000);
   transition-delay: 0s;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--color-icon-contour);
+  fill: var(--color-icon-contour, #000);
   transition-delay: 0.05s;
 }
 
 .like-icon:active .core {
-  fill: var(--color-animation-fill);
+  fill: var(--color-animation-fill, #f00);
   transition-delay: 0s;
 }
 
 .like-icon:active .main-body {
-  fill: var(--color-animation-fill);
+  fill: var(--color-animation-fill, #f00);
   transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--color-animation-fill);
+  fill: var(--color-animation-fill, #f00);
   transition-delay: 0s;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--color-animation-fill);
+  fill: var(--color-animation-fill, #f00);
   transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--color-animation-fill);
+  fill: var(--color-animation-fill, #f00);
   transition-delay: 0.06s;
   transition-duration: 0.3s;
 }
@@ -304,7 +304,7 @@
   display: grid;
   border: var(--border-default);
   padding: 30px;
-  background-color: var(--color-surface-default);
+  background-color: var(--color-surface-default, #fff);
   background-clip: padding-box;
   max-inline-size: clamp(341px, 90vw, 353px);
 }
@@ -323,9 +323,9 @@
 }
 
 .dialog__text {
-  font-family: var(--font-family-ui);
-  font-weight: var(--font-weight-ui);
-  font-size: var(--font-size-ui);
+  font-family: var(--font-family-ui, fantasy);
+  font-weight: var(--font-weight-ui, 400);
+  font-size: var(--font-size-ui, 0.875rem);
   line-height: 1.5;
   text-transform: uppercase;
 }
