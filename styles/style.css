@@ -4,7 +4,7 @@
   padding-block: 100px;
   color: var(--color-text-default);
   font-family: var(--font-family-page);
-  background-image: var(--page-background);
+  background-image: var(--background-fill);
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -98,6 +98,7 @@
 }
 
 @supports (-webkit-text-stroke: 1px #fff) {
+
   .card__label {
     -webkit-text-stroke: 1px var(--color-label-stroke);
     text-stroke: 1px var(--color-label-stroke);
@@ -105,10 +106,11 @@
 }
 
 @supports not (-webkit-text-stroke: 1px white) {
+
   .card__label {
-    text-shadow: 
+    text-shadow:
       -1px 0 var(--color-label-stroke),
-      1px 0 var(--color-label-stroke), 
+      1px 0 var(--color-label-stroke),
       0 -1px var(--color-label-stroke),
       0 1px var(--color-label-stroke);
   }
@@ -342,6 +344,7 @@
 }
 
 @media (width <= 375px) {
+
   .action__button {
     flex-direction: column;
   }

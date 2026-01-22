@@ -10,36 +10,29 @@
 
   --font-family-ui: 'PressStart2P', fantasy;
   --font-weight-ui: 400;
-  --font-size-ui-logo: clamp(
-    3.0625rem,
-    2.7104rem + 1.5023vw,
-    4.0625rem
-  );
-  --font-size-ui-title: clamp(
-    0.875rem,
-    0.6769rem + 0.8451vw,
-    1.4375rem
-  );
+  --font-size-ui-logo: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --font-size-ui-title: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --font-size-ui: 0.875rem;
 
- /* Фон страницы */
+  /* Фон страницы */
 
-  --background-fill: repeating-linear-gradient(
-    to right,
-    rgb(211 211 211 / 1) 0 2px,
-    rgb(211 211 211 / 0) 2px 4px
-  ),
+  --background-fill:
     repeating-linear-gradient(
-    to bottom,
-    rgb(211 211 211 / 1) 0 2px,
-    rgb(211 211 211 / 0) 2px 4px
-  ),
+      to right,
+      rgb(211 211 211 / 1) 0 2px,
+      rgb(211 211 211 / 0) 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgb(211 211 211 / 1) 0 2px,
+      rgb(211 211 211 / 0) 2px 4px
+    ),
     linear-gradient(
-    to bottom,
-    rgb(231 231 231) 0%,
-    rgb(231 231 231) 0.01%,
-    rgb(26 26 26) 100%
-  );
+      to bottom,
+      rgb(231 231 231) 0%,
+      rgb(231 231 231) 0.01%,
+      rgb(26 26 26) 100%
+    );
 
   /* Резиновый размер блоков */
 
@@ -49,7 +42,7 @@
 
   --color-black: #000;
   --color-white: #fff;
-  --color-red: #FF0000;
+  --color-red: #f00;
 
   /* Цвет иконок */
 
