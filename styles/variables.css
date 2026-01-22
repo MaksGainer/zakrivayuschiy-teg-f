@@ -1,1 +1,80 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* Всё для Page */
+
+  --font-family-page: 'Inter-Variable', sans-serif;
+  --font-weight-page: 410;
+  --font-weight-page-title: 715;
+  --font-size-page: 1.125rem;
+
+  /* Всё для UI-элементов */
+
+  --font-family-ui: 'PressStart2P', fantasy;
+  --font-weight-ui: 400;
+  --font-size-ui-logo: clamp(
+    3.0625rem,
+    2.7104rem + 1.5023vw,
+    4.0625rem
+  );
+  --font-size-ui-title: clamp(
+    0.875rem,
+    0.6769rem + 0.8451vw,
+    1.4375rem
+  );
+  --font-size-ui: 0.875rem;
+
+ /* Фон страницы */
+
+  --background-fill: repeating-linear-gradient(
+    to right,
+    rgb(211 211 211 / 1) 0 2px,
+    rgb(211 211 211 / 0) 2px 4px
+  ),
+    repeating-linear-gradient(
+    to bottom,
+    rgb(211 211 211 / 1) 0 2px,
+    rgb(211 211 211 / 0) 2px 4px
+  ),
+    linear-gradient(
+    to bottom,
+    rgb(231 231 231) 0%,
+    rgb(231 231 231) 0.01%,
+    rgb(26 26 26) 100%
+  );
+
+  /* Резиновый размер блоков */
+
+  --block-width: clamp(375px, 100vw, 700px);
+
+  /* Цвета страницы */
+
+  --color-black: #000;
+  --color-white: #fff;
+  --color-red: #FF0000;
+
+  /* Цвет иконок */
+
+  --color-icon-contour: var(--color-black);
+  --color-animation-fill: var(--color-red);
+
+  /* Surfaces */
+
+  --color-surface-default: var(--color-white);
+
+  /* Button */
+
+  --color-text-default: var(--color-black);
+  --color-button-text: var(--color-white);
+
+  /* Border */
+
+  --color-border-default: var(--color-black);
+  --border-default: 2px solid var(--color-border-default);
+
+  /* Accent */
+
+  --color-accent-default: var(--color-black);
+
+  /* Text stroke */
+
+  --color-stroke: var(--color-white);
+}
