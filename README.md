@@ -8,4 +8,4 @@
  [GitHub](https://github.com/MaksGainer/zakrivayuschiy-teg-f.git)
 
  **Онлайн версия проекта:**
- [GitHub Pages]()
+ [GitHub Pages](https://maksgainer.github.io/zakrivayuschiy-teg-f/)
